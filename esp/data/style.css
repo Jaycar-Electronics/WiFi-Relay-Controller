@@ -1,0 +1,30 @@
+
+.centre{
+  margin: auto;
+  width: 80%;
+  border: 1px solid grey;
+  border-radius: 3%;
+}
+
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button.relay { 
+  border-radius: 5%;
+  padding: 1em;
+  display: block;
+  margin: 2em;
+}
+
+button.isOff{
+  background: grey;
+}
+
+button.isOff::before {
+  content: "Turn On";
+}
+
+button.isOn::before {
+  content: "Turn Off";
+}

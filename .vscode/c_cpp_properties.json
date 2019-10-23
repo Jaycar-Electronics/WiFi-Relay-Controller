@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "C:\\Users\\dw06\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools\\**",
+                "C:\\Users\\dw06\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\**",
+                "C:\\Opt\\arduino-1.8.9\\tools\\**",
+                "C:\\Opt\\arduino-1.8.9\\hardware\\arduino\\avr\\**"
+            ],
+            "forcedInclude": []
+        }
+    ],
+    "version": 4
+}
