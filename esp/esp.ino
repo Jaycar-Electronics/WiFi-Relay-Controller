@@ -8,7 +8,7 @@ IPAddress serverIP(1, 0, 0, 1);
 //another define bunch
 //similar to the uno code
 //#define D(...) Serial.println(__VA_ARGS__);
-//#define D(...)
+#define D(...)
 
 const long serial_baud = 115200;
 
