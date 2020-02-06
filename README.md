@@ -62,7 +62,7 @@ For this section we will want to program the UNO side of things, so use a pen or
 
 | Pin   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- |
-| State | OFF | OFF | ON  | ON  | OFF | OFF | OFF | OFF |
+| State | OFF | OFF | **ON**  | **ON**  | OFF | OFF | OFF | OFF |
 
 Then open up the `uno/uno.ino` portion of the code in the Arduino IDE editor, and upload as normal.
 
@@ -91,7 +91,7 @@ Set the dip-switches as below.
 
 | Pin   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- |
-| State | OFF | OFF | OFF | OFF | ON  | ON  | ON  | OFF |
+| State | OFF | OFF | OFF | OFF | **ON**  | **ON**  | **ON**  | OFF |
 
 For this portion you need to open up the esp/esp.ino code in the Arduino IDE, and change the board type to `Generic ESP8266` board.
 
