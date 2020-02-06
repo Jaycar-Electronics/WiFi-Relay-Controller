@@ -113,7 +113,7 @@ Similar to the uno code, we have another bunch of defines for debugging. you can
 
 Some important things to remember, when changing the code:
 
-- Always keep `Flash size` the same. If you change it, you will have to reupload both the code and the website.
+- Always keep `Flash size` the same. If you change it, you will have to re-upload both the code and the website.
 - When uploading, you must turn **dip-switch 7** to be **ON**. Then turn it _OFF_ when you want to interact with the Serial Monitor and the ESP.
 - If you change website code, you will have to use the data upload tool to copy it onto the flash, Still with the dip-switch 7 on.
 
@@ -123,7 +123,7 @@ Once the two halves are programmed, Finally switch the dip switches to the below
 
 | Pin   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- |
-| State | ON  | ON  | OFF | OFF | OFF | OFF | OFF | OFF |
+| State | **ON**  | **ON**  | OFF | OFF | OFF | OFF | OFF | OFF |
 
 This will connect the Serial of the ESP to the Serial of the UNO. Now it is only powered by USB and the Serial Monitor will not be connected to anything.
 
@@ -139,7 +139,7 @@ The website isn't much to look at, but it works. You should be able to press but
 
 If you find some things not working, connect your computer to the network ( alternatively, connect the ESP to your home network) and open up the website on your computer. You should be able to open up the "Chrome Inspector Tool" and find a console that will output messages.
 
-A surefire way to test what is happening however, is to connect the Serial Monitor to the device ( with the dip-switches corresponding to what section you're testing) and test each portion of the code as you require.
+A sure-fire way to test what is happening however, is to connect the Serial Monitor to the device ( with the dip-switches corresponding to what section you're testing) and test each portion of the code as you require.
 
 - For instance, you should find that with the uno code, sending `>3a` turns on relay 3, and `>3d` turns off relay 3.
 - Similarly, with the ESP code, pressing on the "Turn On Relay 1" button, you should get a `>1a` command output on the Serial Monitor.
@@ -169,7 +169,7 @@ $("button.relay").on("click", function() {
 });
 ```
 
-In this function we `fetch()` a new webpage, which points to `/relay`, and if the return status is ok, we add the class "isOn" to the button:
+In this function we `fetch()` a new web-page, which points to `/relay`, and if the return status is ok, we add the class "isOn" to the button:
 
 ```javascript
 fetch("relay?relay=3&mode=activate").then(response => {
@@ -220,7 +220,7 @@ In the UNO.ino (again, simplified):
   digitalWrite(theRelay, theMode);
 ```
 
-One thing to note is that dataflow is only one direction in this code, There is no `Serial.write()` on the UNO to be `Serial.read()` by the ESP.
+One thing to note is that data-flow is only one direction in this code, There is no `Serial.write()` on the UNO to be `Serial.read()` by the ESP.
 
 ## Further reading
 
@@ -229,7 +229,7 @@ One thing to note is that dataflow is only one direction in this code, There is 
 - Github Repos
   - [Git basics](https://git-scm.com/book/en/v1/Getting-Started-Git-Basics)
   - [visual git guide](http://marklodato.github.io/visual-git-guide/index-en.html)
-  - [Forking a respository][fork]
+  - [Forking a repository][fork]
   - [Submitting a pull request][pull]
 - ESP8266 SPIFFS
   - [SPIFFS API](http://arduino.esp8266.com/Arduino/versions/2.0.0/doc/filesystem.html)
