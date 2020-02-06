@@ -1,6 +1,8 @@
 # WiFi Relay Controller
 
-Create an ESP8266 Website to control 8 relays.
+Create an ESP8266 Website to control up to 8 relays on our [XC4418](https://jaycar.com.au/p/XC4418) 8 Channel Relay Controller
+
+![relay use animation](images/relay.gif)
 
 Use relays effortlessly with this simple two-part setup! Simply connect any device you want to test or activate to the relay module; then use the in-built phone app to control them whenever you want. Set relays to toggle, timer, or momentary activation; and even set them go at certain times in the day. Great for automatic plant watering kits, testing devices, controlling lights or any other load up to 10 amps.
 
@@ -13,17 +15,17 @@ Use relays effortlessly with this simple two-part setup! Simply connect any devi
 
 ### You might also want
 
-- some mounting hardware, and or a box to put it in.
-- prototyping wires
-- [Bootlace crimps](https://jaycar.com.au/p/PT4533), such as [PT4433](https://jaycar.com.au/p/PT4433) which work for connecting wires to the screw down terminals on the relay board
+- Prototyping wires, Plug-Socket: [WC6028](https://jaycar.com.au/p/WC6028).
+- Bootlace crimps, such as [PT4433](https://jaycar.com.au/p/PT4433) which work for connecting wires to the screw down terminals on the relay board
+- Some mounting hardware, and or a box to put it in.
 
 ## Software Libraries
 
 As always, you should have the `ESP8266` library installed in your Arduino IDE tool, along with the ESP8266 Data-Upload plugin. If not you can get either one from below:
 
-- ESP8266 Library
+- **ESP8266 Library**
   - Follow the instructions in the manual for the [XC3802](https://jaycar.com.au/p/XC3802) found in the download page on the jaycar website.
-- ESP8266 Data-Upload tool:
+- **ESP8266 Data-Upload tool**
   - Instructions are found here: <https://github.com/esp8266/arduino-esp8266fs-plugin>
 
 ## System overview
@@ -133,8 +135,6 @@ Open up your phone's WiFi and reboot the [XC4411](https://jaycar.com.au/p/XC4411
 
 The website isn't much to look at, but it works. You should be able to press buttons and find the relays turned on and off. If you know how to make a website look good and want to have a shot of making this look better, have a go of developing a new `data/` folder and submit it on the github issues tab, or [fork the repo][fork] and [submit a pull request][pull].
 
-![relay use animation](images/relay.gif)
-
 ### Debugging when things go wrong
 
 If you find some things not working, connect your computer to the network ( alternatively, connect the ESP to your home network) and open up the website on your computer. You should be able to open up the "Chrome Inspector Tool" and find a console that will output messages.
@@ -164,7 +164,7 @@ On the website is a button that we use to turn the relay on, it's a simple `<but
 Then we have some javascript code (simplified):
 
 ```javascript
-$('button.relay').on('click', function() {
+$("button.relay").on("click", function() {
   //do this when a button with the class 'relay' is clicked
 });
 ```
@@ -172,9 +172,9 @@ $('button.relay').on('click', function() {
 In this function we `fetch()` a new webpage, which points to `/relay`, and if the return status is ok, we add the class "isOn" to the button:
 
 ```javascript
-fetch('relay?relay=3&mode=activate').then(response => {
+fetch("relay?relay=3&mode=activate").then(response => {
   if (response.status == 200) {
-    button.addClass('isOn');
+    button.addClass("isOn");
   }
 });
 ```
