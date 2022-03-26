@@ -1,37 +1,30 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wifi Relay Controller</title>
 
-  <title> Wifi Relay Controller </title>
-  <!-- Then we just set up some html options for making it look proper on the phone-->
   <link rel='stylesheet' href='style.css'>
-  <meta charset="utf-8">
-  <meta name='viewport' content='width=device-width, height=device-height, initial-scale=1, shrink-to-fit=yes'>
+
 </head>
-
 <body>
-
-  <div class='centre'>
-
-    <h3>Simple Relay Controller </h3>
+  <div class='relay-container'>
+    <h3>Simple Relay Controller</h3>
 
     <!-- here we add buttons, then change them around in index.js-->
-    <button id='0' class='relay isOff'> Relay 1 </button>
-    <button id='1' class='relay isOff'> Relay 2 </button>
-    <button id='2' class='relay isOff'> Relay 3 </button>
-    <button id='3' class='relay isOff'> Relay 4 </button>
-    <button id='4' class='relay isOff'> Relay 5 </button>
-    <button id='5' class='relay isOff'> Relay 6 </button>
-    <button id='6' class='relay isOff'> Relay 7 </button>
-    <button id='7' class='relay isOff'> Relay 8 </button>
+    <div><button class='relay-btn' onclick="toggleRelay(0)">Relay 1</button> <span id="value-0" class="value">Off</span></div>
+    <div><button class='relay-btn' onclick="toggleRelay(1)">Relay 2</button> <span id="value-1" class="value">Off</span></div>
+    <div><button class='relay-btn' onclick="toggleRelay(2)">Relay 3</button> <span id="value-2" class="value">Off</span></div>
+    <div><button class='relay-btn' onclick="toggleRelay(3)">Relay 4</button> <span id="value-3" class="value">Off</span></div>
+    <div><button class='relay-btn' onclick="toggleRelay(4)">Relay 5</button> <span id="value-4" class="value">Off</span></div>
+    <div><button class='relay-btn' onclick="toggleRelay(5)">Relay 6</button> <span id="value-5" class="value">Off</span></div>
+    <div><button class='relay-btn' onclick="toggleRelay(6)">Relay 7</button> <span id="value-6" class="value">Off</span></div>
+    <div><button class='relay-btn' onclick="toggleRelay(7)">Relay 8</button> <span id="value-7" class="value">Off</span></div>
   </div>
 
-</body>
-
 <!-- Now for our app specific files-->
-<script src="jquery-3.4.1.min.js"></script>
 <script src="index.js"></script>
-
+</body>
 </html>
