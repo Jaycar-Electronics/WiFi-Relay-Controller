@@ -64,7 +64,8 @@ For this section we will want to program the UNO side of things, so use a pen or
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- |
 | State | OFF | OFF | **ON**  | **ON**  | OFF | OFF | OFF | OFF |
 
-Then open up the `uno/uno.ino` portion of the code in the Arduino IDE editor, and upload as normal.
+To upload, connect the UNO to your PC. Open your Arduino IDE, set the board to Arduino UNO. Set the PORT (check which COM your Arduino is connected to).
+Then open up the `uno/uno.ino` portion of the code in the Arduino IDE editor, and upload. 
 
 #### Testing the code (optional)
 
